@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include buzztag *.css
+recursive-include buzztag *.csv
+recursive-include buzztag *.html
+recursive-include buzztag *.ico
+recursive-include buzztag *.js
+recursive-include buzztag *.json
+recursive-include buzztag *.md
+recursive-include buzztag *.png
+recursive-include buzztag *.py
+recursive-include buzztag *.svg
+recursive-include buzztag *.txt
+recursive-exclude buzztag *.pyc
