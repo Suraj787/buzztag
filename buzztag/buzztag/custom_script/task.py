@@ -1,7 +1,8 @@
 import frappe
 
 def validate(doc,method):
-	set_permissions(doc)
+	pass
+	# set_permissions(doc)
 
 def set_permissions(doc):
 	reports_to_list = make_reports_to_data(doc)
