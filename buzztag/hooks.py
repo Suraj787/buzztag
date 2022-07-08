@@ -101,6 +101,9 @@ doctype_js = {
 doc_events = {
 	"Task":{
         "validate":"buzztag.buzztag.custom_script.task.validate"
+	},
+	"DocShare":{
+        "validate":"buzztag.buzztag.custom_script.docshare.validate"
 	}
 }
 
