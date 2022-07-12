@@ -1,7 +1,8 @@
 import frappe
 
 def validate(doc,method):
-    assign_task_for_share_user(doc)
+    if doc.share_doctype == 'Task':
+        assign_task_for_share_user(doc)
 
 def assign_task_for_share_user(doc):
     if not check_duplicate_todo(doc):
