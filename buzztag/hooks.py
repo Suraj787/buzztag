@@ -33,7 +33,8 @@ app_license = "MIT"
 # include js in doctype views
 doctype_js = {
  "doctype" : "public/js/doctype.js",
- "Project":"public/js/project.js"
+ "Project":"public/js/project.js",
+ "Task":"public/js/task.js"
  }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -90,9 +91,10 @@ doctype_js = {
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Attendance Request": "buzztag.Override.attendance_request.CustomAttendanceRequest",
+    "Attendance":"buzztag.Override.attendance.CustomAttendance"
+}
 
 # Document Events
 # ---------------
