@@ -45,3 +45,38 @@ def check_duplicate_permission(doc,user):
 			'applicable_for': "Task",
 			'name': ['!=', doc.name]
 		}, limit=1)
+		
+		
+
+@frappe.whitelist()
+def create_docshare(name,assigned_to):
+    doc_share = frappe.new_doc("DocShare")
+    doc_share.share_doctype = frappe.form_dict.doctype
+    doc_share.user = frappe.form_dict.assigned_to
+    doc_share.share_name=frappe.form_dict.name
+    doc_share.read=True
+    doc_share.write=True
+    doc_share.share=False
+    doc_share.submit=False
+    doc_share.everyone=False
+    doc_share.notify_by_email=False
+    doc_share.insert(ignore_permissions=True)
+    frappe.response['message'] = "hello"
+
+
+@frappe.whitelist()
+def create_docshare_for_task_session_user():
+    is_already_created = frappe.db.exists("DocShare", {"share_doctype": "Task", "user":frappe.session.user, "share_name": frappe.form_dict.name})
+    if not is_already_created:
+       doc_share_session = frappe.new_doc('DocShare')
+       doc_share_session.share_doctype = frappe.form_dict.doctype
+       doc_share_session.user= frappe.session.user
+       doc_share_session.share_name = frappe.form_dict.name
+       doc_share_session.read= True
+       doc_share_session.write= True
+       doc_share_session.share = False
+       doc_share_session.submit= False
+       doc_share_session.everyone =False
+       doc_share_session.notify_by_email= False
+       doc_share_session.insert(ignore_permissions=True)
+
