@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "INF.-",
+ "creation": "2023-03-23 12:07:01.045045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "influencers_section",
+  "influencer_medium",
+  "yt_channel_name",
+  "yt_channel_link",
+  "column_break_5",
+  "ytinfluencer_name",
+  "ytsubscribers",
+  "avg_views",
+  "followers_and_contacts_section",
+  "insta_influencer_name",
+  "instagram_link",
+  "insta_followers",
+  "insta_avg_views",
+  "insta_avg_likes",
+  "column_break_14",
+  "fb_link",
+  "fb_followers",
+  "fb_avg_likes",
+  "language",
+  "contact",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "influencers_section",
+   "fieldtype": "Section Break",
+   "label": "Influencers "
+  },
+  {
+   "fieldname": "influencer_medium",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Influencer Medium",
+   "options": "\nInstagram\nYouTube",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.influencer_medium==\"YouTube\"",
+   "fieldname": "yt_channel_name",
+   "fieldtype": "Data",
+   "label": "YT Channel Name",
+   "mandatory_depends_on": "eval:doc.influencer_medium==\"YouTube\""
+  },
+  {
+   "depends_on": "eval:doc.influencer_medium==\"YouTube\"",
+   "fieldname": "yt_channel_link",
+   "fieldtype": "Data",
+   "label": "YT Channel Link",
+   "mandatory_depends_on": "eval:doc.influencer_medium==\"YouTube\""
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.influencer_medium==\"YouTube\"",
+   "fieldname": "avg_views",
+   "fieldtype": "Data",
+   "label": "Avg. Views",
+   "mandatory_depends_on": "eval:doc.influencer_medium==\"YouTube\""
+  },
+  {
+   "fieldname": "followers_and_contacts_section",
+   "fieldtype": "Section Break",
+   "label": "Followers and Contacts"
+  },
+  {
+   "fieldname": "instagram_link",
+   "fieldtype": "Data",
+   "label": "Instagram Link"
+  },
+  {
+   "fieldname": "insta_followers",
+   "fieldtype": "Data",
+   "label": " Insta Followers"
+  },
+  {
+   "fieldname": "insta_avg_views",
+   "fieldtype": "Data",
+   "label": "Insta Avg. views"
+  },
+  {
+   "fieldname": "insta_avg_likes",
+   "fieldtype": "Data",
+   "label": "Insta Avg. likes"
+  },
+  {
+   "fieldname": "fb_link",
+   "fieldtype": "Data",
+   "label": "FB link"
+  },
+  {
+   "fieldname": "fb_followers",
+   "fieldtype": "Data",
+   "label": "FB Followers"
+  },
+  {
+   "fieldname": "fb_avg_likes",
+   "fieldtype": "Data",
+   "label": "FB Avg. likes"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "\nTamil\nTelugu\nKannada\nMalayalam\nGujrati\nHindi\nEnglish\nMarathi"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contact "
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ytinfluencer_name",
+   "fieldtype": "Data",
+   "label": "YTInfluencer Name"
+  },
+  {
+   "depends_on": "eval:doc.influencer_medium==\"YouTube\"",
+   "fieldname": "ytsubscribers",
+   "fieldtype": "Data",
+   "label": "YTSubscribers",
+   "mandatory_depends_on": "eval:doc.influencer_medium==\"YouTube\""
+  },
+  {
+   "fieldname": "insta_influencer_name",
+   "fieldtype": "Data",
+   "label": "Insta Influencer Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Contacted\nReceived reply\nNo Reply\nOn Board\nRejected"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-24 17:10:57.516578",
+ "modified_by": "Administrator",
+ "module": "buzztag",
+ "name": "Influencers",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

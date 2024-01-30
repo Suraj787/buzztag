@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-03 23:14:59.252481",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task Template",
+   "options": "Project Template"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-03 23:17:24.731634",
+ "modified_by": "Administrator",
+ "module": "buzztag",
+ "name": "Task Template",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

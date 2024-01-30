@@ -1,0 +1,46 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "charts_label": "Project User",
+ "creation": "2022-06-25 13:49:24.121779",
+ "developer_mode_only": 0,
+ "disable_user_customization": 1,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Project Users",
+ "links": [],
+ "modified": "2022-07-05 12:51:12.544452",
+ "modified_by": "Administrator",
+ "module": "buzztag",
+ "name": "Project Users",
+ "onboarding": "",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Task",
+   "link_to": "Task",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Timesheet",
+   "link_to": "Timesheet",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Celebrity List",
+   "link_to": "Celebrity",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": ""
+}
