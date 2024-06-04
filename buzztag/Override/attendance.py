@@ -1,5 +1,5 @@
 import frappe
-from erpnext.hr.doctype.attendance.attendance import Attendance
+from hrms.hrms.doctype.attendance.attendance import Attendance
 from frappe.utils import getdate, nowdate
 
 
