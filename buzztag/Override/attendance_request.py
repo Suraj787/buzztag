@@ -1,11 +1,11 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
-from erpnext.hr.doctype.attendance_request.attendance_request import AttendanceRequest
+from hrms.hr.doctype.attendance_request.attendance_request import AttendanceRequest
 from frappe.utils import add_days, date_diff, getdate
 
-from erpnext.hr.doctype.employee.employee import is_holiday
-from erpnext.hr.utils import validate_active_employee, validate_dates
+# from erpnext.hr.doctype.employee.employee import is_holiday
+from hrms.hr.utils import validate_active_employee, validate_dates
 
 
 
