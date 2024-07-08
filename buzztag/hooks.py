@@ -102,11 +102,13 @@ override_doctype_class = {
 
 doc_events = {
 	"Task":{
-        "validate":"buzztag.buzztag.custom_script.task.validate"
+        # "validate":"buzztag.buzztag.custom_script.task.validate"
+        "validate":"buzztag.buzztag.doctype.task.validate",
+        "after_insert":"buzztag.buzztag.doctype.task.after_insert"
 	},
-	"DocShare":{
-        "validate":"buzztag.buzztag.custom_script.docshare.validate"
-	}
+	# "DocShare":{
+        # "validate":"buzztag.buzztag.custom_script.docshare.validate"
+	# }
 }
 
 # Scheduled Tasks
